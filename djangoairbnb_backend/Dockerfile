@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     netcat \
     libpq-dev \
     gcc \
+    sqlite3 \
     && apt-get clean
 
 # Upgrade pip
