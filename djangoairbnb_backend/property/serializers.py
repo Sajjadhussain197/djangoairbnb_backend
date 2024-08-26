@@ -5,7 +5,6 @@ from useraccount.serializers import UserDetailSerializer
 
 
 class PropertiesListSerializer(serializers.ModelSerializer):
-    landlord = UserDetailSerializer(read_only = True, many=False)
     class Meta:
         model = Property
         fields = (
@@ -16,6 +15,8 @@ class PropertiesListSerializer(serializers.ModelSerializer):
 
         )
 class PropertiesDetailSerializer(serializers.ModelSerializer):
+    
+    landlord = UserDetailSerializer(read_only = True, many=False)
     class Meta:
          model = Property
          fields = (
